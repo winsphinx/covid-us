@@ -51,19 +51,19 @@ def draw_(province, isDaily):
     # 绘图呈现
     plt.figure(figsize=(15, 6))
 
-    plt.plot(data.index, data, label="实际值", color="blue")
-    plt.plot(validating.index, validating, label="校验值", color="orange")
-    plt.plot(forecasting.index, forecasting, label="预测值", color="red")
+    plt.plot(data.index, data, label="Active Value", color="blue")
+    plt.plot(validating.index, validating, label="Check Value", color="orange")
+    plt.plot(forecasting.index, forecasting, label="Predicted Value", color="red")
     # plt.fill_between(forecasting.index, pred_ci[:, 0], pred_ci[:, 1], color="black", alpha=.25)
 
     plt.legend()
     plt.ticklabel_format(style='plain', axis='y')
     plt.rcParams["font.sans-serif"] = ["Microsoft YaHei"]
     if isDaily:
-        plt.title(f"每日新增预测 - {province}\nARIMA {model.model_.order}x{model.model_.seasonal_order} (R2 = {r2:.6f})")
+        plt.title(f"Daily Increments Forecasting - {province}\nARIMA {model.model_.order}x{model.model_.seasonal_order} (R2 = {r2:.6f})")
         plt.savefig(os.path.join("figures", f"covid-{adjust_name(province)}-daily.svg"), bbox_inches="tight")
     else:
-        plt.title(f"累计确诊预测 - {province}\nARIMA {model.model_.order}x{model.model_.seasonal_order} (R2 = {r2:.6f})")
+        plt.title(f"Cumulative Diagnosis Forecasting - {province}\nARIMA {model.model_.order}x{model.model_.seasonal_order} (R2 = {r2:.6f})")
         plt.savefig(os.path.join("figures", f"covid-{adjust_name(province)}.svg"), bbox_inches="tight")
 
 
