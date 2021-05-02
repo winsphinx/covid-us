@@ -76,7 +76,7 @@ def draw_(province, isDaily):
 
     plt.legend()
     plt.ticklabel_format(style="plain", axis="y")
-    plt.rcParams["font.sans-serif"] = ["Microsoft YaHei"]
+    # plt.rcParams["font.sans-serif"] = ["Microsoft YaHei"]
     if isDaily:
         plt.title(
             f"Daily Increments Forecasting - {province}\nARIMA {model.model_.order}x{model.model_.seasonal_order} (R2 = {r2:.6f})"
