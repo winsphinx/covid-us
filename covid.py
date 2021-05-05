@@ -85,6 +85,7 @@ def draw_(province, isDaily):
             os.path.join("figures", f"covid-{adjust_name(province)}-daily.svg"),
             bbox_inches="tight",
         )
+        plt.close()
     else:
         plt.title(
             f"Accumulative Confirmed Cases Forecasting - {province}\nARIMA {model.model_.order}x{model.model_.seasonal_order} (R2 = {r2:.6f})"
@@ -93,6 +94,7 @@ def draw_(province, isDaily):
             os.path.join("figures", f"covid-{adjust_name(province)}.svg"),
             bbox_inches="tight",
         )
+        plt.close()
 
 
 if __name__ == "__main__":
