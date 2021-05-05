@@ -71,7 +71,7 @@ def draw_(province, isDaily):
 
     plt.plot(data.index, data, label="Actual Value", color="blue")
     plt.plot(validating.index, validating, label="Check Value", color="orange")
-    plt.plot(forecasting.index, forecasting, label="Predicted Value", color="red")
+    plt.plot(forecasting.index, forecasting, label="Predict Value", color="red")
     # plt.fill_between(forecasting.index, pred_ci[:, 0], pred_ci[:, 1], color="black", alpha=.25)
 
     plt.legend()
