@@ -27,7 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -U matplotlib pandas pmdarima scikit_learn
-        python covid.py
+        python -W ignore covid.py
 
     - name: Commit files
       run: |
