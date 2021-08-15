@@ -139,6 +139,9 @@ if __name__ == "__main__":
         f.write(
             "[![build status](https://github.com/winsphinx/covid-us/actions/workflows/build.yml/badge.svg)](https://github.com/winsphinx/covid-us/actions/workflows/build.yml)\n"
         )
+        f.write(
+            "[![Data From](https://img.shields.io/badge/Data%20From-https://github.com/CSSEGISandData/COVID--19-brightgreen)](https://github.com/CSSEGISandData/COVID-19)\n"
+        )
         f.write("# COVID-19 Forecasting\n\n")
         for province in provinces:
             f.write(f"## {province}\n\n")
