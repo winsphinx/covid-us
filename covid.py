@@ -67,7 +67,7 @@ def draw_(province, isDaily):
     forecasting = pd.Series(pred, index=idx)
 
     # 绘图呈现
-    plt.figure(figsize=(15, 6))
+    plt.figure(figsize=(24, 6))
 
     plt.plot(data.index, data, label="Actual Value", color="blue")
     plt.plot(validating.index, validating, label="Check Value", color="orange")
